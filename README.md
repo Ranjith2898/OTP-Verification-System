@@ -2,11 +2,11 @@
 
 ## 📌 Project Overview
 
-The OTP Verification System is a Python-based authentication mechanism that generates a 6-digit OTP (One-Time Password) and sends it to a user's email for verification. The user must enter the received OTP to gain access, ensuring a secure login process.
+The OTP Verification System is a **Python-based** authentication mechanism that generates a 6-digit OTP (One-Time Password) and sends it to a user's email for verification. The user must enter the received OTP to gain access, ensuring a secure login process.
 
 ## 🔥 Problem Statement
 
-The goal is to develop an OTP verification system in Python that:
+**The goal is to develop an OTP verification system in Python that:**
 
 * Generates a random 6-digit OTP.
 * Sends the OTP to the user's email.
@@ -15,17 +15,12 @@ The goal is to develop an OTP verification system in Python that:
 
 ## 🚀 Features
 
-✔ Random OTP Generation
-
-✔ Email-based OTP Delivery
-
-✔ OTP Validation & Retry Option
-
-✔ 5-Minute OTP Expiry
-
-✔ Secure Error Handling
-
-✔ User-Friendly Interaction
+✔ Random OTP Generation<br>
+✔ Email-based OTP Delivery<br>
+✔ OTP Validation & Retry Option<br>
+✔ 5-Minute OTP Expiry<br>
+✔ Secure Error Handling<br>
+✔ User-Friendly Interaction<br>
 
 ## 🛠️ Project Breakdown
 
@@ -35,57 +30,46 @@ The goal is to develop an OTP verification system in Python that:
 
 2️⃣ Send OTP to Email
 
-* Uses SMTP (Simple Mail Transfer Protocol) to send an email with the OTP.
-
+* Uses SMTP (Simple Mail Transfer Protocol) to send an email with the OTP.<br>
 * Gmail SMTP Server (smtp.gmail.com) is used for secure email transmission.
 
 3️⃣ User Input
 
-* Prompts the user to enter their email.
-
+* Prompts the user to enter their email.<br>
 * Validates the email format using Regular Expressions (Regex).
 
 4️⃣ Verify OTP
 
-* Compares the user-entered OTP with the generated OTP.
-
-* Allows up to 3 retry attempts before denying access.
-
+* Compares the user-entered OTP with the generated OTP.<br>
+* Allows up to 3 retry attempts before denying access.<br>
 * Ensures OTP expires after 5 minutes.
 
 5️⃣ Error Handling
 
-* Checks for invalid email formats.
-
-* Ensures OTP input is exactly 6 digits.
-
+* Checks for invalid email formats.<br>
+* Ensures OTP input is exactly 6 digits.<br>
 * Handles SMTP authentication errors securely.
 
 💻 Python Implementation
 
 ## 📌 Key Libraries Used:
 
-import smtplib
-
-import random
-
-import time
-
-import re
-
-from email.mime.text import MIMEText
-
-from email.mime.multipart import MIMEMultipart
+**import smtplib<br>**
+**import random<br>**
+**import time<br>**
+**import re<br>**
+**from email.mime.text import MIMEText<br>**
+**from email.mime.multipart import MIMEMultipart<br>**
 
 ✅ OTP Generation Function
 
-def generate_otp():
+**def generate_otp():**
 
     return str(random.randint(100000, 999999))
 
 ## 📧 Function to Send OTP via Email
 
-def send_email(recipient_email, otp):
+**def send_email(recipient_email, otp):**
 
     try:
         # Email Configurations
@@ -130,7 +114,7 @@ def send_email(recipient_email, otp):
 
 
     # Function to Verify OTP with retries and timeout
-def otp_verification():
+**def otp_verification():**
 
     while True:
         # Request the user's email address
@@ -192,32 +176,21 @@ def otp_verification():
 
 ✅ Correct OTP Entry
 
-Enter your email address: gunnalaranjithkumar31@gmail.com
-
-OTP sent successfully.
-
-Enter the OTP sent to your email: 123456
-
+Enter your email address: gunnalaranjithkumar31@gmail.com<br>
+OTP sent successfully.<br>
+Enter the OTP sent to your email: 123456<br>
 Success! OTP verified.
 
 ❌ Incorrect OTP Entry
 
-Enter your email address: gunnalaranjithkumar31@gmail.com
-
-OTP sent successfully.
-
-Enter the OTP sent to your email: 654321
-
-Incorrect OTP. 2 retries left.
-
-Enter the OTP sent to your email: 543210
-
-Incorrect OTP. 1 retry left.
-
-Enter the OTP sent to your email: 111111
-
-Verification failed. Access denied!
-
+Enter your email address: gunnalaranjithkumar31@gmail.com<br>
+OTP sent successfully.<br>
+Enter the OTP sent to your email: 654321<br>
+Incorrect OTP. 2 retries left.<br>
+Enter the OTP sent to your email: 543210<br>
+Incorrect OTP. 1 retry left.<br>
+Enter the OTP sent to your email: 111111<br>
+Verification failed. Access denied!<br>
 
 ## 🔐 Security Considerations
 
@@ -227,10 +200,8 @@ Verification failed. Access denied!
 
 ## 📢 Summary
 
-🔹 This project implements a secure OTP-based authentication system.
-
-🔹 It covers OTP generation, email verification, input validation, and security handling.
-
+🔹 This project implements a secure OTP-based authentication system.<br>
+🔹 It covers OTP generation, email verification, input validation, and security handling.<br>
 🔹 This concept is widely used in banking, e-commerce, and login verification systems.
 
 
