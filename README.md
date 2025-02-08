@@ -1,10 +1,10 @@
 # OTP Verification System
 
-📌 Project Overview
+## 📌 Project Overview
 
 The OTP Verification System is a Python-based authentication mechanism that generates a 6-digit OTP (One-Time Password) and sends it to a user's email for verification. The user must enter the received OTP to gain access, ensuring a secure login process.
 
-🔥 Problem Statement
+## 🔥 Problem Statement
 
 The goal is to develop an OTP verification system in Python that:
 
@@ -13,7 +13,7 @@ The goal is to develop an OTP verification system in Python that:
 * Validates the user-entered OTP.
 * Provides retries in case of incorrect input.
 
-🚀 Features
+## 🚀 Features
 
 ✔ Random OTP Generation
 
@@ -27,7 +27,7 @@ The goal is to develop an OTP verification system in Python that:
 
 ✔ User-Friendly Interaction
 
-🛠️ Project Breakdown
+## 🛠️ Project Breakdown
 
 1️⃣ Generate OTP
 
@@ -63,7 +63,7 @@ The goal is to develop an OTP verification system in Python that:
 
 💻 Python Implementation
 
-📌 Key Libraries Used:
+## 📌 Key Libraries Used:
 
 import smtplib
 
@@ -83,7 +83,7 @@ def generate_otp():
 
     return str(random.randint(100000, 999999))
 
-📧 Function to Send OTP via Email
+## 📧 Function to Send OTP via Email
 
 def send_email(recipient_email, otp):
 
@@ -126,7 +126,7 @@ def send_email(recipient_email, otp):
       email_regex = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
       return re.match(email_regex, email) is not None
 
-🔄 OTP Validation and Verification
+## 🔄 OTP Validation and Verification
 
 
     # Function to Verify OTP with retries and timeout
@@ -184,11 +184,11 @@ def otp_verification():
                 print("Error: Verification failed. Access denied!")
                 return
 
-🔄 Running the OTP Verification
+## 🔄 Running the OTP Verification
 
      otp_verification()
 
-🎯 Expected Outputs
+## 🎯 Expected Outputs
 
 ✅ Correct OTP Entry
 
@@ -219,13 +219,13 @@ Enter the OTP sent to your email: 111111
 Verification failed. Access denied!
 
 
-🔐 Security Considerations
+## 🔐 Security Considerations
 
 * Use App Passwords instead of storing raw email passwords.
 * Ensure OTP expiry (5 minutes) to prevent replay attacks.
 * Limit OTP retries to prevent brute force attempts.
 
-📢 Summary
+## 📢 Summary
 
 🔹 This project implements a secure OTP-based authentication system.
 
